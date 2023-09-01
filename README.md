@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>Blog app - creating a data model</h1>
+	<h1>Blog App - processing data in models</h1>
   </div>
 <a name="readme-top"></a>
 
@@ -19,9 +19,9 @@
 - [📝 License](#license)
 
 
-# 📖 Blog app - creating a data model <a name="about-project"></a>
+# 📖Blog App - processing data in models <a name="about-project"></a>
 
-**Blog app - creating a data model** In this project, I use migration files to build my schema.
+**Blog App - processing data in models** In the previous work, I was already set up my models. Where we have tables for Users, Posts, Comments, and Likes. I was aleady set the foreign key in the table schema but I make sure to write it here too!
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
