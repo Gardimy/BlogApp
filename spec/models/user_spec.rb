@@ -26,7 +26,7 @@ RSpec.describe User, type: :model do
       user = User.create(name: 'John', posts_counter: 0)
 
       # Create some posts for the user with different timestamps
-      post1 = user.posts.create(title: 'Post 1', text: 'Content 1', created_at: 2.days.ago)
+      user.posts.create(title: 'Post 1', text: 'Content 1', created_at: 2.days.ago)
       post2 = user.posts.create(title: 'Post 2', text: 'Content 2', created_at: 1.day.ago)
       post3 = user.posts.create(title: 'Post 3', text: 'Content 3', created_at: Time.now)
 
