@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>Blog App -validations and model specs</h1>
+	<h1>Blog app - controllers</h1>
   </div>
 <a name="readme-top"></a>
 
@@ -19,9 +19,9 @@
 - [📝 License](#license)
 
 
-# 📖Blog App - validations and model specs <a name="about-project"></a>
+# 📖Blog app - controllers <a name="about-project"></a>
 
-**Blog App - validations and model specs** In this project, I add validations to my models and create specs for them.
+**Blog app - controllers** In this project, I create all controllers and views for my Blog app. As I won't be processing any data yet, I add simple placeholders for my views with plain HTML.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
