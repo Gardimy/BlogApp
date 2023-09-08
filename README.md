@@ -57,10 +57,6 @@ Coming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 💻 Getting Started <a name="getting-started"></a>
-
-To get a local copy up and running cloning this repo `https://github.com/Gardimy/BlogApp`.
-
 ### Prerequisites
 
 > You need the following tools be installed in your computer:
@@ -114,7 +110,7 @@ To run tests, run the following command:
 
 - GitHub: [@Gardimy](https://github.com/Gardimy)
 - Twitter: [@gardyelontiga45](https://twitter.com/gardyelontiga45)
-- LinkedIn: [Gardimy charles](https://www.linkedin.com/in/gardimy-charles)
+- LinkedIn: [Gardimy charles](https://www.linkedin.com/in/gardimycharles/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
