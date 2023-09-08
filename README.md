@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>Blog app - controllers</h1>
+	<h1>Blog app - Views</h1>
   </div>
 <a name="readme-top"></a>
 
@@ -19,9 +19,9 @@
 - [📝 License](#license)
 
 
-# 📖Blog app - controllers <a name="about-project"></a>
+# 📖Blog app - Views <a name="about-project"></a>
 
-**Blog app - controllers** In this project, I create all controllers and views for my Blog app. As I won't be processing any data yet, I add simple placeholders for my views with plain HTML.
+**Blog app - Views** In this milestone, I add the Views associated with the Models and Controllers I've already created for my Blog App.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
