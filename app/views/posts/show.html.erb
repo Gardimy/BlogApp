@@ -12,13 +12,14 @@
         <p>Number of Comments: <%= @targated_post.comments_counter %></p>
     </div>
     
-    <div class="comments">
+    <div class="sectioncomment">
         <h3>Comments</h3>
         <ul>
             <% @comments.each do |comment| %>
                 <li><%= comment.text %></li>
             <% end %>
         </ul>
+		<a href="posts">go to Posts</a>
     </div>
 </div>
   </body>
