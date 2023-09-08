@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
-  <h1>User Profile</h1>
-  <p>Placeholder: This is the user profile page.</p>
-  <p>Number of Posts</p>
+  <div class="container">
+    <div class="user-header">
+        <h2><%= @user.name %></h2>
+        <p>Number of Posts: <%= @posts.count %></p>
+    </div>
+
+    <div class="user-bio">
+        <h3>Bio</h3>
+        <p><%= @user.bio %></p>
+    </div>
+
+    <div class="user-posts">
+        <% @posts.each do |post| %>
+            <div class="post">
+                <h2><%= post.title %></h2>
+                <p><%= post.text %></p>
+            </div>
+        <% end %>
+    </div>
+
+    <div class="see-all-posts">
+        <a href="#">See all posts</a>
+    </div>
+</div>
    </body>
 </html>

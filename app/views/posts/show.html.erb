@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
   <body>
-    <h1><%= @post.title %></h1> <!-- Display the post title here -->
-    <p>Placeholder: This is the details page for a specific post.</p>
+  <div class="container">
+    <div class="user-header">
+        <h2><%= @user.name %></h2>
+        <h3><%= @targated_post.title %></h3>
+        <p>Number of Comments: <%= @targated_post.comments_counter %></p>
+    </div>
+    
+    <div class="comments">
+        <h3>Comments</h3>
+        <ul>
+            <% @comments.each do |comment| %>
+                <li><%= comment.text %></li>
+            <% end %>
+        </ul>
+    </div>
+</div>
   </body>
 </html>
