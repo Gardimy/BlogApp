@@ -114,10 +114,8 @@
               <%= post.likes.count %> Likes
             </span>
           </div>
-          
-          <!-- Display comments and usernames -->
           <div class="comments">
-            <% post.comments.each do |comment| %>
+            <% post.recent_comments(5).each do |comment| %>
               <div class="comment">
                 <span class="comment-username"><%= comment.author.name %>:</span>
                 <span class="comment-text"><%= comment.text %></span>
