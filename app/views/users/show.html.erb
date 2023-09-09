@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="application.css">
     <style>
-      .user-item {
+	.user-item {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
@@ -108,7 +108,7 @@
         <p><%= @user.bio %></p>
       </div>
       <div class="user-posts">
-        <% @posts.each do |post| %>
+        <% @user.recent_posts(3).each do |post| %>
           <div class="post">
             <h2 class="post-title"><%= post.title %></h2>
             <p class="post-text"><%= post.text %></p>
