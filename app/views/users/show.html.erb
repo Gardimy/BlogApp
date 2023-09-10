@@ -123,7 +123,7 @@
           </div>
         <% end %>
       </div>
-      <%= render partial: 'posts/form', locals: { post: @current_user.posts.build } %>
+      <%= render partial: 'posts/form', locals: { post: @set_current_user.posts.build } %>
       <div class="see-all-posts">
         <%= link_to "See all posts", user_posts_path(@user) %>
       </div>

@@ -48,7 +48,7 @@
     </style>
 	</head>
  <body>
-<%= form_for(post, url: user_posts_path(@current_user)) do |f| %>
+<%= form_for(post, url: user_posts_path(@set_current_user)) do |f| %>
   <div class="form-container">
     <h2>Create a New Post</h2>
     <div class="field">
