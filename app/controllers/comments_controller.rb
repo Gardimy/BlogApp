@@ -1,5 +1,9 @@
 class CommentsController < ApplicationController
-  before_action :find_post, only: [:create]
+  before_action :find_post, only: [:new, :create]
+
+  def new
+    @comment = @post.comments.build
+  end
 
   def create
     @comment = @post.comments.build(comment_params)
@@ -8,7 +12,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @post, notice: 'Comment was successfully created.'
     else
-      render 'posts/show'
+      render 'new'
     end
   end
 
