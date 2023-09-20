@@ -9,7 +9,7 @@ RSpec.describe 'Posts', type: :request do
     it 'returns a successful response' do
       get post_path(post)
       expect(response).to have_http_status(200)
-    end  
+    end
 
     it 'renders the show template' do
       get post_path(post)
@@ -18,7 +18,7 @@ RSpec.describe 'Posts', type: :request do
 
     it 'includes the post title in the response body' do
       get post_path(post)
-    #  expect(response.body).to include(post.title)
-    end  
+      #  expect(response.body).to include(post.title)
+    end
   end
 end

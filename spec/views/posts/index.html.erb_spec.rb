@@ -19,14 +19,14 @@ RSpec.describe 'User Post Index Page', type: :feature do
   end
 
   it 'redirects to a post\'s show page when clicking on a post title' do
-	visit user_posts_path(User.first)
-  
-	# Click on a post title link
-	click_link('Hello')
+    visit user_posts_path(User.first)
 
-	# Add Capybara assertions to check that you are on the post's show page
-	expect(current_path).to eq(post_path(Post.first))
-	expect(page).to have_content('First Post Title')
-	expect(page).to have_content('Posted by Username1')
-  end  
+    # Click on a post title link
+    click_link('Hello')
+
+    # Add Capybara assertions to check that you are on the post's show page
+    expect(current_path).to eq(post_path(Post.first))
+    expect(page).to have_content('First Post Title')
+    expect(page).to have_content('Posted by Username1')
+  end
 end
