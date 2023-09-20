@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'User Show Page', type: :feature do
   before do
-    # Add setup code here if needed (e.g., create a user record)
   end
 
   it 'displays user profile information and first 3 posts' do
@@ -13,7 +12,6 @@ RSpec.describe 'User Show Page', type: :feature do
 
     visit user_path(user)
 
-    # Add Capybara assertions to check for user profile information and posts
     expect(page).to have_content('Username1')
     expect(page).to have_selector('img.user-image')
     expect(page).to have_content('Number of Posts: 3')
@@ -27,7 +25,6 @@ RSpec.describe 'User Show Page', type: :feature do
     user = User.create(name: 'Username1', bio: 'User Bio')
     visit user_path(user)
 
-    # Click the "See all posts" link
     click_link('See all posts')
 
     expect(current_path).to eq(user_posts_path(user))
