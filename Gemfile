@@ -54,6 +54,8 @@ end
 
 gem 'rails-controller-testing'
 
+gem 'will_paginate', '~> 3.3'
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
