@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'User Show Page', type: :feature do
   before do
+	#visit root_path
   end
 
   it 'displays user profile information and first 3 posts' do
