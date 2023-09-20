@@ -9,7 +9,7 @@ RSpec.describe 'Post Show Page', type: :feature do
     visit post_path(Post.first)
 
     # Add Capybara assertions to check for post details and comments
-    #expect(page).to have_content('Commenter2:')
-    #expect(page).to have_content('Commenter2\'s Comment')
+    # expect(page).to have_content('Commenter2:')
+    # expect(page).to have_content('Commenter2\'s Comment')
   end
 end
