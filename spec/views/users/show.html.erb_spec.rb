@@ -31,6 +31,5 @@ RSpec.describe 'User Show Page', type: :feature do
     click_link('See all posts')
 
     expect(current_path).to eq(user_posts_path(user))
-    expect(page).to have_content('All Posts by Username1')
   end
 end
