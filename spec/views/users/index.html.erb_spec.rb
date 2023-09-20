@@ -6,7 +6,7 @@ RSpec.describe 'User Index Page', type: :feature do
   end
 
   it 'displays username, profile picture, and post count for a user' do
-    user = User.create(name: 'Username1', bio: 'User Bio')
+    User.create(name: 'Username1', bio: 'User Bio')
     visit users_path
 
     # Add Capybara assertions to check for username, profile picture, and post count
