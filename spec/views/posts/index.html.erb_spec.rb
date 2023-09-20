@@ -24,7 +24,6 @@ RSpec.describe 'User Post Index Page', type: :feature do
     # Click on a post title link
     click_link('Hello')
 
-    # Add Capybara assertions to check that you are on the post's show page
     expect(current_path).to eq(post_path(Post.first))
     expect(page).to have_content('First Post Title')
     expect(page).to have_content('Posted by Username1')

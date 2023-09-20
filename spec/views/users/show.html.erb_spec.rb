@@ -30,7 +30,6 @@ RSpec.describe 'User Show Page', type: :feature do
     # Click the "See all posts" link
     click_link('See all posts')
 
-    # Add Capybara assertions to check that you are on the user's post index page
     expect(current_path).to eq(user_posts_path(user))
     expect(page).to have_content('All Posts by Username1')
   end
