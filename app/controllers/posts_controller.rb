@@ -6,13 +6,13 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:user_id])
     @targated_post = Post.find_by(id: params[:id])
 
     if @targated_post.nil?
       flash[:error] = 'Post not found'
-      redirect_to root_path
+      redirect_to user_posts_path(@user)
     else
-      @user = @targated_post.author # Retrieve the author of the post
       @comments = @targated_post.comments
     end
   end
@@ -20,11 +20,6 @@ class PostsController < ApplicationController
   private
 
   def find_user
-    @user = User.find_by(id: params[:user_id])
-
-    unless @user
-      flash[:error] = 'User not found'
-      redirect_to root_path
-    end
+    @user = User.find(params[:user_id])
   end
 end
