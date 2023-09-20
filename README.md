@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>Blog app - Views</h1>
+	<h1>Blog app - integration specs for views</h1>
   </div>
 <a name="readme-top"></a>
 
@@ -19,9 +19,9 @@
 - [📝 License](#license)
 
 
-# 📖Blog app - Views <a name="about-project"></a>
+# 📖 integration specs for views <a name="about-project"></a>
 
-**Blog app - Views** In this milestone, I add the Views associated with the Models and Controllers I've already created for my Blog App.
+**Blog app - integration specs** In this project, I create integration tests for all of the views used in my project
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
