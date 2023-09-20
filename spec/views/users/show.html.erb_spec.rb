@@ -39,4 +39,15 @@ RSpec.describe 'User Show Page', type: :feature do
 
     expect(current_path).to eq(user_posts_path(user))
   end
+
+  it 'redirects to a post\'s show page when clicking on a user\'s post' do
+    user = User.create(name: 'Username1', bio: 'User Bio')
+    post = user.posts.create(title: 'First Post Title', text: 'First Post Text')
+
+    visit user_path(user)
+
+    # Verify that the post details are displayed on the post's show page
+    expect(page).to have_content('First Post Title')
+    expect(page).to have_content('First Post Text')
+  end
 end
