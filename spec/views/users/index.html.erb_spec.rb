@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'User Index Page', type: :feature do
   before do
-	# Add setup code here if needed (e.g., create user and posts)
+    # Add setup code here if needed (e.g., create user and posts)
   end
 
   it 'displays username, profile picture, and post count for a user' do
