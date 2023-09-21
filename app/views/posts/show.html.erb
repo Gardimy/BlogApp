@@ -97,6 +97,7 @@
     </style>
   </head>
   <body>
+  <h1>List of all posts</h1>
     <div class="container">
       <div class="post-list">
         <div class="post">
@@ -108,13 +109,13 @@
           </div>
           <p class="post-text"><%= @targated_post.text %></p>
           
-          <% if @set_current_user %>
-            <% if @current_user.likes.exists?(post: @targated_post) %>
-              <%= link_to "Unlike", post_like_path(@targated_post, @set_current_user.likes.find_by(post: @targated_post)), method: :delete, class: 'btn btn-danger' %>
-            <% else %>
-              <%= link_to "Like", post_likes_path(@targated_post), method: :post, class: 'btn btn-primary' %>
-            <% end %>
-          <% end %>
+		  <% if @current_user %>
+		  <% if @current_user.likes.exists?(post: @targated_post) %>
+			<%= link_to "Unlike", post_like_path(@targated_post, @current_user.likes.find_by(post: @targated_post)), method: :delete, class: 'btn btn-danger' %>
+		  <% else %>
+			<%= link_to "Like", post_likes_path(@targated_post), method: :post, class: 'btn btn-primary' %>
+		  <% end %>
+		<% end %>
         </div>
         <div class="comment-container">
           <% @comments.each do |comment| %>
