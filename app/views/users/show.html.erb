@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="application.css">
     <style>
-	.user-item {
+      .user-item {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
@@ -74,26 +74,26 @@
 
       .post-comments {
         color: black;
-		margin-left: 290px;
+        margin-left: 290px;
       }
 
       .post-likes {
         color: black;
       }
 
-	  .see-all-posts {
+      .see-all-posts {
         margin-left: 160px;
         margin-top: 20px;
-		font-size: 1.2em;
-		width: 10%;
-		color: black;
-		border-radius: 25px;
-		border: 2px solid black;
+        font-size: 1.2em;
+        width: 10%;
+        color: black;
+        border-radius: 25px;
+        border: 2px solid black;
       }
     </style>
   </head>
   <body>
-  <h1>List of all posts</h1>
+    <h1>List of all posts</h1>
     <div class="container">
       <div class="user-item">
         <div class="user-image">
@@ -124,7 +124,7 @@
           </div>
         <% end %>
       </div>
-      <%= render partial: 'posts/form', locals: { post: @set_current_user.posts.build } %>
+      <%= render partial: 'posts/form', locals: { post: @user.posts.build } %>
       <div class="see-all-posts">
         <%= link_to "See all posts", user_posts_path(@user) %>
       </div>
