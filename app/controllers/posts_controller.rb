@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_user, only: [:index]
+	before_action :authenticate_user!
 
   def index
     @posts = @user.posts.includes(:comments).paginate(page: params[:page])
