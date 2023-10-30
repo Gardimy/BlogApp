@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-    resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+  devise_for :users
+  root "users#index"
+
+  resources :users, only: [:index, :show] do
+    # Add a nested resource for user-specific posts
+    resources :posts, only: [:index, :show, :create]
+    resources :comments, only: [:create]
+    resources :likes, only: [:create]
   end
 
   resources :posts, only: [:show]

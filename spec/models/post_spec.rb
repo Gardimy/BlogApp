@@ -40,4 +40,22 @@ RSpec.describe Post, type: :model do
       end.to change(user, :posts_counter).by(1)
     end
   end
+
+  describe '#recent_comments' do
+    it 'returns the most recent comments limited by the specified limit' do
+      user = User.create(name: 'John', posts_counter: 0)
+      post = Post.new(title: 'Test Post', comments_counter: 0, likes_counter: 0, author: user)
+      post.save!
+
+      comments = []
+      (1..10).each do |i|
+        comment = Comment.create!(text: "Comment #{i}", post:, author: user)
+        comments << comment
+      end
+
+      recent_comments = post.send(:recent_comments, 5)
+
+      expect(recent_comments.to_a).to eq(comments.last(5).reverse)
+    end
+  end
 end
