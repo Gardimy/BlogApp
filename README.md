@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>Blog app - controllers</h1>
+	<h1>Blog app: add devise</h1>
   </div>
 <a name="readme-top"></a>
 
@@ -19,9 +19,9 @@
 - [📝 License](#license)
 
 
-# 📖Blog app - controllers <a name="about-project"></a>
+# 📖 integration specs for views <a name="about-project"></a>
 
-**Blog app - controllers** In this project, I create all controllers and views for my Blog app. As I won't be processing any data yet, I add simple placeholders for my views with plain HTML.
+**Blog app - integration specs** In this project, My coding partner and l add the devise gem to our app and use it for the registration and login of users.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -56,10 +56,6 @@ Coming soon
 - Step 4: If you want to edit this project open it with your favorite text editor.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-To get a local copy up and running cloning this repo `https://github.com/Gardimy/BlogApp`.
 
 ### Prerequisites
 
@@ -114,7 +110,7 @@ To run tests, run the following command:
 
 - GitHub: [@Gardimy](https://github.com/Gardimy)
 - Twitter: [@gardyelontiga45](https://twitter.com/gardyelontiga45)
-- LinkedIn: [Gardimy charles](https://www.linkedin.com/in/gardimy-charles)
+- LinkedIn: [Gardimy charles](https://www.linkedin.com/in/gardimycharles/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
