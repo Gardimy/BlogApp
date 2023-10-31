@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>Blog app - Views</h1>
+	<h1>Blog app: add devise</h1>
   </div>
 <a name="readme-top"></a>
 
@@ -19,9 +19,9 @@
 - [📝 License](#license)
 
 
-# 📖Blog app - Views <a name="about-project"></a>
+# 📖 integration specs for views <a name="about-project"></a>
 
-**Blog app - Views** In this milestone, I add the Views associated with the Models and Controllers I've already created for my Blog App.
+**Blog app - integration specs** In this project, My coding partner and l add the devise gem to our app and use it for the registration and login of users.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
