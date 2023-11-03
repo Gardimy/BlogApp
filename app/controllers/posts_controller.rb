@@ -1,5 +1,9 @@
 class PostsController < ApplicationController
-  before_action :find_user, only: [:index]
+  before_action :find_user, only: [:index, :new, :create]
+
+  def index
+    @posts = @user.posts.includes(:comments)
+  end
 
   def new
     @post = Post.new
@@ -15,25 +19,13 @@ class PostsController < ApplicationController
     end
   end
 
-  def index
-    @posts = @user.posts.includes(:comments)
-  end
-
-  def show
-    @user = User.find(params[:user_id])
-    @targated_post = Post.find_by(id: params[:id])
-
-    if @targated_post.nil?
-      flash[:error] = 'Post not found'
-      redirect_to user_posts_path(@user)
-    else
-      @comments = @targated_post.comments
-    end
-  end
-
   private
 
   def find_user
     @user = User.find(params[:user_id])
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end

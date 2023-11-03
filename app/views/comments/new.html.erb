@@ -1,6 +1,9 @@
-<%= form_for @comment do |f| %>
-  <%= f.label :text %>
-  <%= f.text_area :text %>
-
-  <%= f.submit 'Create Comment' %>
+<%= form_with(model: [@post, @comment], url: post_comments_path(@post)) do |form| %>
+  <div class="field">
+    <%= form.label :text %>
+    <%= form.text_area :text %>
+  </div>
+  <div class="actions">
+    <%= form.submit 'Create Comment' %>
+  </div>
 <% end %>
