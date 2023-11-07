@@ -1,15 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe 'User Post Index Page', type: :feature do
-  before do
-    # Add setup code here if needed (e.g., create user and posts)
-  end
+RSpec.feature 'Post Index Page', type: :feature do
+  scenario 'displays post information' do
+    user = User.create(name: 'Example User', bio: 'User Bio')
+    post = user.posts.create(title: 'Example Post', text: 'Post Text')
+    visit user_posts_path(user)
 
-  it 'displays user profile information and post details' do
-    visit user_posts_path(User.first)
-
-    expect(page).to have_content('Gardimy')
-    expect(page).to have_selector('img.user-image')
-    expect(page).to have_content('Number of Posts: 0')
+    expect(page).to have_content(user.name)
+    expect(page).to have_content(post.title)
+    expect(page).to have_content("Number of Posts: #{user.posts.count}")
+    expect(page).to have_content(post.text)
+    expect(page).to have_content("#{post.comments.count} Comments")
+    expect(page).to have_content("#{post.likes.count} Likes")
   end
 end
