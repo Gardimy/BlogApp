@@ -7,7 +7,7 @@ RSpec.feature 'Post Index Page', type: :feature do
     visit user_posts_path(user)
 
     expect(page).to have_content(user.name)
-	expect(page).to have_selector('img.user-image[alt="User Image"]')
+	expect(page).to have_css('img.user-image[alt="User Image"]') 
     expect(page).to have_content(post.title)
     expect(page).to have_content("Number of Posts: #{user.posts.count}")
     expect(page).to have_content(post.text)
