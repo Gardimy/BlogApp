@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root "users#index"
+  devise_for :users
+  root 'users#index'
+  
+  devise_scope :user do
+    get "/custom_sign_out" => "devise/sessions#destroy", as: :custom_destroy_user_session
+  end
 
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :show]
@@ -10,5 +15,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
 
-  # Remove the separate resources for comments
+  devise_scope :user do
+    get '/users/sign_out', to: 'devise/sessions#destroy'
+  end
 end
