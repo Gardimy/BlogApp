@@ -1,51 +1,56 @@
-    <div class="container">
-      <div class="user-item">
-        <div class="user-image">
-          <img src="/assets/envelope-regular.svg" alt="User Image" class="user-image">
-        </div>
-        <div class="user-details">
-          <h2 class="user-name"><%= @user.name %></h2>
-          <p class="user-post-count">Number of Posts: <%= @posts.count %></p>
-        </div>
-      </div>
-      <div class="user-bio">
-        <h3>Bio</h3>
-        <p><%= @user.bio %></p>
-      </div>
-      <div class="user-posts">
-        <% @user.recent_posts(3).each do |post| %>
-          <div class="post">
-            <h2 class="post-title"><%= post.title %></h2>
-            <p class="post-text"><%= post.text %></p>
-            <div class="post-details">
-              <span class="post-comments">
-                <%= post.comments.count %> Comments
-              </span>
-              <span class="post-likes">
-                <%= post.likes.count %> Likes
-              </span>
-            </div>
-          </div>
-        <% end %>
-      </div>
-
-      <!-- Form for creating a new post -->
-      <%= form_with(model: @post, url: user_posts_path(@user), class: "form") do |form| %>
-        <div class="field">
-          <%= form.label :title %>
-          <%= form.text_field :title %>
-        </div>
-        <div class="field">
-          <%= form.label :text %>
-          <%= form.text_area :text %>
-        </div>
-        <div class="actions">
-          <%= form.submit 'Create Post' %>
-        </div>
-      <% end %>
-      
-      <div class="see-all-posts">
-        <%= link_to "See all posts", user_posts_path(@user) %>
-      </div>
+<div class="container">
+  <div class="user-item">
+    <div class="user-image">
+      <img src="/assets/envelope-regular.svg" alt="User Image" class="user-image">
     </div>
-	
+    <div class="user-details">
+      <h2 class="user-name"><%= @user.name %></h2>
+      <p class="user-post-count">Number of Posts: <%= @posts.count %></p>
+    </div>
+  </div>
+  <div class="user-bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+  <div class="user-posts">
+    <% @user.recent_posts(3).each do |post| %>
+      <div class="post">
+        <h2 class="post-title"><%= post.title %></h2>
+        <p class="post-text"><%= post.text %></p>
+        <div class="post-details">
+          <span class="post-comments">
+            <%= post.comments.count %> Comments
+          </span>
+          <span class="post-likes">
+            <%= post.likes.count %> Likes
+          </span>
+        </div>
+
+        <!-- Display delete button for authorized users -->
+        <% if can?(:destroy, post) %>
+          <%= link_to 'Delete Post', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <% end %>
+
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Form for creating a new post -->
+  <%= form_with(model: @post, url: user_posts_path(@user), class: "form") do |form| %>
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
+    <div class="field">
+      <%= form.label :text %>
+      <%= form.text_area :text %>
+    </div>
+    <div class="actions">
+      <%= form.submit 'Create Post' %>
+    </div>
+  <% end %>
+  
+  <div class="see-all-posts">
+    <%= link_to "See all posts", user_posts_path(@user) %>
+  </div>
+</div>

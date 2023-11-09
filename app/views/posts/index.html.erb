@@ -102,28 +102,34 @@
     </div>
 
     <div class="post-list">
-      <% @posts.each do |post| %>
-        <div class="post">
-          <h2 class="post-title"><%= post.title %></h2>
-          <p class="post-text"><%= post.text %></p>
-          <div class="post-details">
-            <span class="post-comments">
-              <%= post.comments.count %> Comments
-            </span>
-            <span class="post-likes">
-              <%= post.likes.count %> Likes
-            </span>
-          </div>
-          <div class="comments">
-            <% post.recent_comments(5).each do |comment| %>
-              <div class="comment">
-                <span class="comment-username"><%= comment.author.name %>:</span>
-                <span class="comment-text"><%= comment.text %></span>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
+	<% @posts.each do |post| %>
+		<div class="post">
+		  <h2 class="post-title"><%= post.title %></h2>
+		  <p class="post-text"><%= post.text %></p>
+		  <div class="post-details">
+			<span class="post-comments">
+			  <%= post.comments.count %> Comments
+			</span>
+			<span class="post-likes">
+			  <%= post.likes.count %> Likes
+			</span>
+		  </div>
+	  
+		  <% if can?(:destroy, post) %>
+			<%= link_to 'Delete Post', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+		  <% end %>
+	  
+		  <div class="comments">
+			<% post.recent_comments(5).each do |comment| %>
+			  <div class="comment">
+				<span class="comment-username"><%= comment.author.name %>:</span>
+				<span class="comment-text"><%= comment.text %></span>
+			  </div>
+			<% end %>
+		  </div>
+		</div>
+	  <% end %>
+	  
     </div>
   </body>
 </html>
