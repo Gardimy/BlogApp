@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
   before_action :find_post, only: %i[new create]
 
   def new
@@ -17,6 +18,11 @@ class CommentsController < ApplicationController
   end
 
   private
+
+  def destroy
+    @comment.destroy
+    redirect_to @comment.post, notice: 'Comment was successfully deleted.'
+  end
 
   def find_post
     @post = Post.find(params[:post_id])

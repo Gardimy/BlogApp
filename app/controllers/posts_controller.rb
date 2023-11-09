@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
   before_action :find_user, only: %i[index new create]
 
   def index
@@ -20,6 +21,11 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def destroy
+    @post.destroy
+    redirect_to user_posts_path(current_user), notice: 'Post was successfully deleted.'
+  end
 
   def find_user
     @user = User.find(params[:user_id])
