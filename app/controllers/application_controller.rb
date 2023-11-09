@@ -1,9 +1,14 @@
 class ApplicationController < ActionController::Base
-  before_action :set_current_user
+  # Remove the before_action and set_current_user method
+  # ...
 
-  def set_current_user
-    @set_current_user ||= User.first
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 
-  helper_method :current_user
+  def after_sign_in_path_for(_resource)
+    user_index_path
+  end
 end
