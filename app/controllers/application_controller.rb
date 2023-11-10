@@ -1,12 +1,12 @@
 class ApplicationController < ActionController::Base
   before_action :load_ability
-#  before_action :configure_permitted_parameters
+  #  before_action :configure_permitted_parameters
 
   # ...
 
   protected
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(_resource)
     users_path
   end
 
