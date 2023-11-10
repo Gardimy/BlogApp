@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>Blog app: add devise</h1>
+	<h1>Blog app: add authorization rules</h1>
   </div>
 <a name="readme-top"></a>
 
@@ -21,7 +21,7 @@
 
 # 📖 integration specs for views <a name="about-project"></a>
 
-**Blog app - integration specs** In this project, My coding partner and l add the devise gem to our app and use it for the registration and login of users.
+**Blog app - integration specs** In this project, my coding parter and I add authorization to our app using CanCanCan.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
