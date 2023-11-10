@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :load_ability
- 
+
 
   protected
 
