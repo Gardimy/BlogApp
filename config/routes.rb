@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
-  root 'users#index'
+  root 'welcome#index'
 
   devise_scope :user do
     get "/custom_sign_out" => "devise/sessions#destroy", as: :custom_destroy_user_session

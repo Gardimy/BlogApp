@@ -1,11 +1,14 @@
-<div class="titre">
-  <h1>Welcome</h1>
-</div>
-<div class="btnlog">
-  <div class="btn">
-    <a class="btn2s" href="<%= new_user_session_path %>">Log In</a>
-  </div>
-  <div class="btn2">
-    <a class="btn2s" href="<%= new_user_registration_path %>">Sign Up</a>
-  </div>
-</div>
+<% if user_signed_in? %>
+      <%# Redirect to the user index page if the user is signed in %>
+      <%= redirect_to users_path %>
+    <% else %>
+      <h1>Welcome</h1>
+      <div class="btnlog">
+        <div class="btn">
+          <a class="btn2s" href="<%= new_user_session_path %>">Log In</a>
+        </div>
+        <div class="btn2">
+          <a class="btn2s" href="<%= new_user_registration_path %>">Sign Up</a>
+        </div>
+      </div>
+    <% end %>
