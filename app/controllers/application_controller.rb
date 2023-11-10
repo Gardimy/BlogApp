@@ -1,13 +1,13 @@
 class ApplicationController < ActionController::Base
   before_action :load_ability
-  before_action :configure_permitted_parameters
+#  before_action :configure_permitted_parameters
 
   # ...
 
   protected
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+  def after_sign_in_path_for(resource)
+    user_index_path
   end
 
   def load_ability
