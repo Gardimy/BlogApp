@@ -1,6 +1,6 @@
 <br>
 <div align='center'>
-	<h1>Blog app: add authorization rules</h1>
+	<h1>Add API Endpoint </h1>
   </div>
 <a name="readme-top"></a>
 
@@ -19,10 +19,9 @@
 - [📝 License](#license)
 
 
-# 📖 integration specs for views <a name="about-project"></a>
-
-**Blog app - integration specs** In this project, my coding parter and I add authorization to our app using CanCanCan.
-## 🛠 Built With <a name="built-with"></a>
+# 📖 Add API endpoint 
+**Blog app - Add API endpoint** In this project, my coding parter and I add some api endpoint to blog app. This will allow our app to used it in different ways rather than just to our site.
+## 🛠 Built With <a name="built-with" ></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 ### Built With <a name="built-with"></a>
