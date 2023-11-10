@@ -20,7 +20,7 @@
 
 
 # 📖 Add API endpoint 
-**Blog app - integration specs** In this project, my coding parter and I add some api endpoint to blog app. This will allow our app to used it in different ways rather than just to our site.
+**Blog app - Add API endpoint** In this project, my coding parter and I add some api endpoint to blog app. This will allow our app to used it in different ways rather than just to our site.
 ## 🛠 Built With <a name="built-with" ></a>
 
 ### Tech Stack <a name="tech-stack"></a>
