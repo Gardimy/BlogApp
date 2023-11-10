@@ -1,8 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :load_ability
-  #  before_action :configure_permitted_parameters
-
-  # ...
+ 
 
   protected
 
